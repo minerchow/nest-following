@@ -21,6 +21,7 @@ specifiers:
   jest: ^29.5.0
   mysql2: ^3.14.0
   prettier: ^3.0.0
+  redis: ^4.7.0
   reflect-metadata: ^0.2.0
   rxjs: ^7.8.1
   source-map-support: ^0.5.21
@@ -39,9 +40,10 @@ dependencies:
   '@nestjs/platform-express': registry.npmjs.org/@nestjs/platform-express/10.4.15_5u4hn6whjn5aawl2edmluzh4i4
   '@nestjs/typeorm': registry.npmjs.org/@nestjs/typeorm/11.0.0_7erxauf5icuykf3lj2fuwj4dcu
   mysql2: registry.npmjs.org/mysql2/3.14.0
+  redis: registry.npmjs.org/redis/4.7.0
   reflect-metadata: registry.npmjs.org/reflect-metadata/0.2.2
   rxjs: registry.npmjs.org/rxjs/7.8.2
-  typeorm: registry.npmjs.org/typeorm/0.3.21_4u462sksr64icn7exwxv3c57ei
+  typeorm: registry.npmjs.org/typeorm/0.3.21_y67rs47hfr7rqm3q2d4j5p4xdy
 
 devDependencies:
   '@nestjs/cli': registry.npmjs.org/@nestjs/cli/10.4.9
@@ -1213,7 +1215,7 @@ packages:
       '@nestjs/core': registry.npmjs.org/@nestjs/core/10.4.15_hym6irywdil7wktfbnltleqjna
       reflect-metadata: registry.npmjs.org/reflect-metadata/0.2.2
       rxjs: registry.npmjs.org/rxjs/7.8.2
-      typeorm: registry.npmjs.org/typeorm/0.3.21_4u462sksr64icn7exwxv3c57ei
+      typeorm: registry.npmjs.org/typeorm/0.3.21_y67rs47hfr7rqm3q2d4j5p4xdy
     dev: false
 
   registry.npmjs.org/@nodelib/fs.scandir/2.1.5:
@@ -1270,6 +1272,72 @@ packages:
     version: 0.1.2
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dev: true
+
+  registry.npmjs.org/@redis/bloom/1.2.0_@redis+client@1.6.0:
+    resolution: {integrity: sha512-HG2DFjYKbpNmVXsa0keLHp/3leGJz1mjh09f2RLGGLQZzSHpkmZWuwJbAvo3QcRY8p80m5+ZdXZdYOSBLlp7Cg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@redis/bloom/-/bloom-1.2.0.tgz}
+    id: registry.npmjs.org/@redis/bloom/1.2.0
+    name: '@redis/bloom'
+    version: 1.2.0
+    peerDependencies:
+      '@redis/client': ^1.0.0
+    dependencies:
+      '@redis/client': registry.npmjs.org/@redis/client/1.6.0
+    dev: false
+
+  registry.npmjs.org/@redis/client/1.6.0:
+    resolution: {integrity: sha512-aR0uffYI700OEEH4gYnitAnv3vzVGXCFvYfdpu/CJKvk4pHfLPEy/JSZyrpQ+15WhXe1yJRXLtfQ84s4mEXnPg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@redis/client/-/client-1.6.0.tgz}
+    name: '@redis/client'
+    version: 1.6.0
+    engines: {node: '>=14'}
+    dependencies:
+      cluster-key-slot: registry.npmjs.org/cluster-key-slot/1.1.2
+      generic-pool: registry.npmjs.org/generic-pool/3.9.0
+      yallist: registry.npmjs.org/yallist/4.0.0
+    dev: false
+
+  registry.npmjs.org/@redis/graph/1.1.1_@redis+client@1.6.0:
+    resolution: {integrity: sha512-FEMTcTHZozZciLRl6GiiIB4zGm5z5F3F6a6FZCyrfxdKOhFlGkiAqlexWMBzCi4DcRoyiOsuLfW+cjlGWyExOw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@redis/graph/-/graph-1.1.1.tgz}
+    id: registry.npmjs.org/@redis/graph/1.1.1
+    name: '@redis/graph'
+    version: 1.1.1
+    peerDependencies:
+      '@redis/client': ^1.0.0
+    dependencies:
+      '@redis/client': registry.npmjs.org/@redis/client/1.6.0
+    dev: false
+
+  registry.npmjs.org/@redis/json/1.0.7_@redis+client@1.6.0:
+    resolution: {integrity: sha512-6UyXfjVaTBTJtKNG4/9Z8PSpKE6XgSyEb8iwaqDcy+uKrd/DGYHTWkUdnQDyzm727V7p21WUMhsqz5oy65kPcQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@redis/json/-/json-1.0.7.tgz}
+    id: registry.npmjs.org/@redis/json/1.0.7
+    name: '@redis/json'
+    version: 1.0.7
+    peerDependencies:
+      '@redis/client': ^1.0.0
+    dependencies:
+      '@redis/client': registry.npmjs.org/@redis/client/1.6.0
+    dev: false
+
+  registry.npmjs.org/@redis/search/1.2.0_@redis+client@1.6.0:
+    resolution: {integrity: sha512-tYoDBbtqOVigEDMAcTGsRlMycIIjwMCgD8eR2t0NANeQmgK/lvxNAvYyb6bZDD4frHRhIHkJu2TBRvB0ERkOmw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@redis/search/-/search-1.2.0.tgz}
+    id: registry.npmjs.org/@redis/search/1.2.0
+    name: '@redis/search'
+    version: 1.2.0
+    peerDependencies:
+      '@redis/client': ^1.0.0
+    dependencies:
+      '@redis/client': registry.npmjs.org/@redis/client/1.6.0
+    dev: false
+
+  registry.npmjs.org/@redis/time-series/1.1.0_@redis+client@1.6.0:
+    resolution: {integrity: sha512-c1Q99M5ljsIuc4YdaCwfUEXsofakb9c8+Zse2qxTadu8TalLXuAESzLvFAvNVbkmSlvlzIQOLpBCmWI9wTOt+g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@redis/time-series/-/time-series-1.1.0.tgz}
+    id: registry.npmjs.org/@redis/time-series/1.1.0
+    name: '@redis/time-series'
+    version: 1.1.0
+    peerDependencies:
+      '@redis/client': ^1.0.0
+    dependencies:
+      '@redis/client': registry.npmjs.org/@redis/client/1.6.0
+    dev: false
 
   registry.npmjs.org/@sinclair/typebox/0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.27.8.tgz}
@@ -2530,6 +2598,13 @@ packages:
     engines: {node: '>=0.8'}
     dev: true
 
+  registry.npmjs.org/cluster-key-slot/1.1.2:
+    resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/cluster-key-slot/-/cluster-key-slot-1.1.2.tgz}
+    name: cluster-key-slot
+    version: 1.1.2
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   registry.npmjs.org/co/4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/co/-/co-4.6.0.tgz}
     name: co
@@ -3571,6 +3646,13 @@ packages:
     version: 2.3.1
     dependencies:
       is-property: registry.npmjs.org/is-property/1.0.2
+    dev: false
+
+  registry.npmjs.org/generic-pool/3.9.0:
+    resolution: {integrity: sha512-hymDOu5B53XvN4QT9dBmZxPX4CWhBPPLguTZ9MMFeFa/Kg0xWVfylOVNlJji/E7yTZWFd/q9GO5TxDLq156D7g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/generic-pool/-/generic-pool-3.9.0.tgz}
+    name: generic-pool
+    version: 3.9.0
+    engines: {node: '>= 4'}
     dev: false
 
   registry.npmjs.org/gensync/1.0.0-beta.2:
@@ -5538,6 +5620,19 @@ packages:
       picomatch: registry.npmjs.org/picomatch/2.3.1
     dev: true
 
+  registry.npmjs.org/redis/4.7.0:
+    resolution: {integrity: sha512-zvmkHEAdGMn+hMRXuMBtu4Vo5P6rHQjLoHftu+lBqq8ZTA3RCVC/WzD790bkKKiNFp7d5/9PcSD19fJyyRvOdQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/redis/-/redis-4.7.0.tgz}
+    name: redis
+    version: 4.7.0
+    dependencies:
+      '@redis/bloom': registry.npmjs.org/@redis/bloom/1.2.0_@redis+client@1.6.0
+      '@redis/client': registry.npmjs.org/@redis/client/1.6.0
+      '@redis/graph': registry.npmjs.org/@redis/graph/1.1.1_@redis+client@1.6.0
+      '@redis/json': registry.npmjs.org/@redis/json/1.0.7_@redis+client@1.6.0
+      '@redis/search': registry.npmjs.org/@redis/search/1.2.0_@redis+client@1.6.0
+      '@redis/time-series': registry.npmjs.org/@redis/time-series/1.1.0_@redis+client@1.6.0
+    dev: false
+
   registry.npmjs.org/reflect-metadata/0.2.2:
     resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.2.2.tgz}
     name: reflect-metadata
@@ -6406,7 +6501,7 @@ packages:
     name: typedarray
     version: 0.0.6
 
-  registry.npmjs.org/typeorm/0.3.21_4u462sksr64icn7exwxv3c57ei:
+  registry.npmjs.org/typeorm/0.3.21_y67rs47hfr7rqm3q2d4j5p4xdy:
     resolution: {integrity: sha512-lh4rUWl1liZGjyPTWpwcK8RNI5x4ekln+/JJOox1wCd7xbucYDOXWD+1cSzTN3L0wbTGxxOtloM5JlxbOxEufA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/typeorm/-/typeorm-0.3.21.tgz}
     id: registry.npmjs.org/typeorm/0.3.21
     name: typeorm
@@ -6477,6 +6572,7 @@ packages:
       dotenv: registry.npmjs.org/dotenv/16.4.7
       glob: registry.npmjs.org/glob/10.4.5
       mysql2: registry.npmjs.org/mysql2/3.14.0
+      redis: registry.npmjs.org/redis/4.7.0
       reflect-metadata: registry.npmjs.org/reflect-metadata/0.2.2
       sha.js: registry.npmjs.org/sha.js/2.4.11
       sql-highlight: registry.npmjs.org/sql-highlight/6.0.0
@@ -6765,6 +6861,12 @@ packages:
     name: yallist
     version: 3.1.1
     dev: true
+
+  registry.npmjs.org/yallist/4.0.0:
+    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz}
+    name: yallist
+    version: 4.0.0
+    dev: false
 
   registry.npmjs.org/yargs-parser/21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz}
