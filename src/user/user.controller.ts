@@ -19,4 +19,10 @@ export class UserController {
     }
     return this.userService.getFollowRelationship(+id);
   }
+
+  @Get('follow')
+  async follow(@Query('id1') userId1: string, @Query('id2') userId2: string) {
+    await this.userService.follow(+userId1, +userId2);
+    return 'done';
+  }
 }
